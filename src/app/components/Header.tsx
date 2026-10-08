@@ -32,7 +32,9 @@ const Header = () => {
                 </div>
             </div>
             <div>
-                <Navbar></Navbar>
+                <Suspense fallback={<p aria-hidden="true">&nbsp;</p>}>
+                    <Navbar />
+                </Suspense>
             </div>
         </div>
     );
